@@ -41,7 +41,7 @@ function tradeSvg(o) {
     line('Realized PnL', (g ? '+' : '-') + '$' + num(Math.abs(o.pnl.value)) + `  ${g ? '+' : '-'}${o.pnl.mult.toFixed(2)}x  (${g ? '+' : ''}${o.pnl.pct.toFixed(0)}%)`, gc);
   }
   rows.push(`<line x1="${pad}" y1="${H - 66}" x2="${W - pad}" y2="${H - 66}" stroke="#1f2a35"/>`);
-  rows.push(T(pad, H - 32, '@RuntimeFlashBot, on-chain execution', { size: 20, fill: '#6f8496' }));
+  rows.push(T(pad, H - 32, '@CorvoFlashBot, on-chain execution', { size: 20, fill: '#6f8496' }));
   rows.push(T(W - pad, H - 32, new Date().toISOString().slice(0, 16).replace('T', ' ') + ' UTC', { size: 19, fill: '#6f8496', anchor: 'end', mono: true }));
   return `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
@@ -76,7 +76,7 @@ function sellAllSvg(items, totalUsd) {
     rows.push(T(W - pad, y, it.ok ? esc(it.got) : 'failed', { size: 25, fill: it.ok ? '#22c55e' : '#ef4444', anchor: 'end', mono: true }));
     y += 52;
   }
-  rows.push(T(pad, H - 28, '@RuntimeFlashBot, on-chain execution', { size: 20, fill: '#6f8496' }));
+  rows.push(T(pad, H - 28, '@CorvoFlashBot, on-chain execution', { size: 20, fill: '#6f8496' }));
   rows.push(T(W - pad, H - 28, new Date().toISOString().slice(0, 16).replace('T', ' ') + ' UTC', { size: 19, fill: '#6f8496', anchor: 'end', mono: true }));
   return `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
@@ -114,7 +114,7 @@ function positionSvg(o) {
   if (o.total != null) { const g = o.total >= 0; pnlLine('Total PnL', (g ? '+' : '-') + '$' + num(Math.abs(o.total)), g ? '#22c55e' : '#ef4444', true); }
   const H = y + 46;
   rows.push(`<line x1="${pad}" y1="${H - 52}" x2="${W - pad}" y2="${H - 52}" stroke="#1f2a35"/>`);
-  rows.push(T(pad, H - 20, '@RuntimeFlashBot, position snapshot', { size: 20, fill: '#6f8496' }));
+  rows.push(T(pad, H - 20, '@CorvoFlashBot, position snapshot', { size: 20, fill: '#6f8496' }));
   rows.push(T(W - pad, H - 20, new Date().toISOString().slice(0, 16).replace('T', ' ') + ' UTC', { size: 19, fill: '#6f8496', anchor: 'end', mono: true }));
   return `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
