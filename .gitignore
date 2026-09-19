@@ -1,0 +1,12 @@
+.env
+.env.*
+*.db
+*.db-wal
+*.db-shm
+*.log
+node_modules/
+*.bak
+*.key
+*.pem
+*.age
+.DS_Store

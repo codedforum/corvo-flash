@@ -1,0 +1,27 @@
+{
+  "name": "runtime-flash-bot",
+  "version": "0.1.0",
+  "description": "Corvo Flash social-trading bot with Definitive Flash advanced orders. @RuntimeFlashBot.",
+  "main": "src/index.js",
+  "private": true,
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "test": "node test/money.test.js && node test/quest-flow.test.js && node test/quest-verify.test.js && node test/arena-rules.test.js && node test/arena-presentation.test.js && node test/arena-media.test.js && node test/arena-progress.test.js && node test/arena-operations.test.js && node test/arena-studio.test.js && node test/arena.test.js && node test/arena-missions.test.js && node test/arena-mission-operations.test.js && node test/arena-phase2.test.js && node test/corvo-engine.test.js",
+    "test:arena-browser": "node test/arena-browser.test.js",
+    "ci": "bash scripts/ci-check.sh",
+    "snapshot": "bash scripts/snapshot.sh"
+  },
+  "dependencies": {
+    "@coinbase/cdp-sdk": "^1.55.0",
+    "@solana/web3.js": "^1.98.4",
+    "better-sqlite3": "^11.3.0",
+    "bs58": "^6.0.0",
+    "dotenv": "^16.4.5",
+    "jsonwebtoken": "^9.0.3",
+    "node-cron": "^3.0.3",
+    "sharp": "^0.34.5",
+    "telegraf": "^4.16.3",
+    "viem": "^2.53.1"
+  }
+}
