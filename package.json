@@ -1,7 +1,7 @@
 {
   "name": "runtime-flash-bot",
   "version": "0.1.0",
-  "description": "Corvo Flash social-trading bot with Definitive Flash advanced orders. @RuntimeFlashBot.",
+  "description": "Corvo Flash social-trading bot with Definitive Flash advanced orders. @CorvoFlashBot.",
   "main": "src/index.js",
   "private": true,
   "scripts": {
